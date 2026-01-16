@@ -3,9 +3,7 @@
 Eine Full-Stack Web-Anwendung als privates Lernprojekt mit modernem Next.js (App Router).  
 Fokus: saubere Architektur, Typsicherheit (TypeScript + Zod), persistente Daten (PostgreSQL + Prisma) und ein späteres Production-Setup auf einer Linux-VM (Nginx + SSL + Node LTS).
 
-> Status: **WIP / Learning Project** (nicht für Produktion gedacht – Deployment/Hardening folgt später)
-
----
+Status: **WIP / Learning Project** (nicht für Produktion gedacht – Deployment/Hardening folgt später)
 
 ## Projektziele
 
@@ -15,8 +13,6 @@ Fokus: saubere Architektur, Typsicherheit (TypeScript + Zod), persistente Daten 
 - Arbeit mit relationalen Datenbanken (PostgreSQL) inkl. Migrations-Workflow
 - Vorbereitung eines produktionsnahen Deployments (Linux VM, Nginx, SSL)
 - Vertiefung von Software-Engineering-Prinzipien wie Wartbarkeit und Skalierbarkeit
-
----
 
 ## Tech-Stack
 
@@ -51,8 +47,6 @@ Fokus: saubere Architektur, Typsicherheit (TypeScript + Zod), persistente Daten 
 - [ ] Auth (optional)
 - [ ] Deployment (Nginx + SSL + PM2/systemd) (später)
 
----
-
 ## Architektur-Überblick
 
 - Frontend und Backend sind über den Next.js App Router integriert
@@ -60,4 +54,3 @@ Fokus: saubere Architektur, Typsicherheit (TypeScript + Zod), persistente Daten 
 - Datenbankzugriff erfolgt ausschließlich über Prisma
 - Zod-Schemas werden zentral definiert und wiederverwendet
 - Fokus auf klare Zuständigkeiten und nachvollziehbare Ordnerstruktur
-
