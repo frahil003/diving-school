@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projekt: Diving School
 
-## Getting Started
+Eine Full-Stack Web-Anwendung als privates Lernprojekt mit modernem Next.js (App Router).  
+Fokus: saubere Architektur, Typsicherheit (TypeScript + Zod), persistente Daten (PostgreSQL + Prisma) und ein späteres Production-Setup auf einer Linux-VM (Nginx + SSL + Node LTS).
 
-First, run the development server:
+> Status: **WIP / Learning Project** (nicht für Produktion gedacht – Deployment/Hardening folgt später)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Projektziele
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Entwurf und Umsetzung einer sauberen Full-Stack-Architektur mit Next.js (App Router)
+- Konsequente End-to-End-Typsicherheit mit TypeScript, Zod und Prisma
+- Strukturierte Trennung von Präsentation, Business-Logik und Datenzugriff
+- Arbeit mit relationalen Datenbanken (PostgreSQL) inkl. Migrations-Workflow
+- Vorbereitung eines produktionsnahen Deployments (Linux VM, Nginx, SSL)
+- Vertiefung von Software-Engineering-Prinzipien wie Wartbarkeit und Skalierbarkeit
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Tech-Stack
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS oder CSS Modules
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend
+- Next.js Server (Route Handlers / API Routes)
+- PostgreSQL
+- Prisma ORM
+- Zod (Request- & Datenvalidierung)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Infrastruktur (Roadmap / produktionsnah)
+- Linux Virtual Machine
+- Nginx als Reverse Proxy inkl. SSL
+- Node.js (LTS)
+- PM2 oder systemd
+- PostgreSQL auf der VM
 
-## Deploy on Vercel
+## Features (aktueller Stand)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Grundlayout + Navigation
+- [ ] Datenbankanbindung (PostgreSQL)
+- [ ] Prisma Schema + Migrationen
+- [ ] CRUD-Funktionalität für zentrale Domänenobjekte
+- [ ] Zod-Validierung für Requests/Responses
+- [ ] UI: Listen/Detailseiten/Formulare
+- [ ] Error-Handling (API + UI)
+- [ ] Auth (optional)
+- [ ] Deployment (Nginx + SSL + PM2/systemd) (später)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Architektur-Überblick
+
+- Frontend und Backend sind über den Next.js App Router integriert
+- API-Routen kapseln Business-Logik und Validierung
+- Datenbankzugriff erfolgt ausschließlich über Prisma
+- Zod-Schemas werden zentral definiert und wiederverwendet
+- Fokus auf klare Zuständigkeiten und nachvollziehbare Ordnerstruktur
+
