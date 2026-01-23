@@ -1,33 +1,39 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Diving School",
-  description: "Diving School - Explore the Depths Together",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="de">
+      <body>
+        <header className="border-b">
+          <nav className="mx-auto flex max-w-5xl items-center gap-4 p-4">
+            <Link className="font-semibold" href="/">
+              Diving School
+            </Link>
+            <Link className="underline" href="/courses">
+              Kurse
+            </Link>
+            <Link className="underline" href="/offers">
+              Last Minute
+            </Link>
+            <Link className="underline" href="/repair">
+              Reparatur-Service
+            </Link>
+            <div className="ml-auto">
+              <Link className="underline" href="/admin">
+                Admin
+              </Link>
+            </div>
+          </nav>
+        </header>
+
+        <main>{children}</main>
+
+        <footer className="mt-12 border-t">
+          <div className="mx-auto max-w-5xl p-4 text-sm opacity-70">
+            © {new Date().getFullYear()} Diving School
+          </div>
+        </footer>
       </body>
     </html>
   );
